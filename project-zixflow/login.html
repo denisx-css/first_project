@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="index.html" /> -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+          overflow-y: hidden;
+        }
+      .zixflow-image {
+        display: flex;
+        /* gap: 10rem; */
+      }
+      .zix-text-container {
+        height: 100vh;
+        flex-basis: 60%;
+        display: grid;
+        place-items: center;
+        z-index: 100;
+        /* position: absolute;
+            left: 870px;
+            bottom: 300px; */
+      }
+      .zix-text-body{
+        width: fit-content;
+        /* display: grid;
+        place-items: center; */
+        height: fit-content;
+      }
+
+      .btn1 {
+        padding: 16px 32px;
+        background-color: #7033ff;
+        color: #fff;
+        border-radius: 16px;
+      }
+      .btn2 {
+        padding: 16px 32px;
+        background-color: #fff;
+        color: black;
+        display: flex;
+        align-items: center;
+        margin-left: 20%;
+      }
+      .p1 {
+        opacity: 0.5;
+      }
+      body {
+        /* background-color: #7033ff; */
+      }
+      .zix-image {
+        max-width: 100%;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        background-color: black;
+        display: grid;
+        place-items: center;
+        flex-basis: 45%;
+        position: relative;
+      }
+      input {
+        padding: 15px 10px;
+        width: 100%;
+      }
+      /* .breakline::before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 6px;
+        color: aliceblue;
+      } */
+      .centered-p{
+        text-align: center;
+      }
+      .zix-image::before{
+        content: "";
+        position: absolute;
+        bottom: 200px;
+        right: 70px;
+        background-image: url("./images/zixflow-grid-pic.svg");
+        background-repeat: no-repeat;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+      }
+      .zix-image::after{
+        content: "";
+        position: absolute;
+        top: 730px;
+        left: 330px;
+        background-image: url("./images/zixflow-dotted.svg");
+        background-repeat: no-repeat;
+        /* z-index: 1; */
+        width: 100%;
+        height: 100%;
+      }
+      .line{
+        width: 200px;
+        height: 2px;
+        background-color: black;
+      }
+      .or-line{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="zixflow-image">
+
+      <div class="zix-image">
+        <a href="index.html"><img  src="images/zixflow-big.svg" alt=""></a>
+      </div>
+
+      <!-- <div class="zixflow-grid" ><img src="images/zixflow-grid-pic.svg" alt=""></div> -->
+
+     <!-- <div class="zixflow-dotted"> <img src="images/zixflow-dotted.svg" alt=""></div> -->
+
+      <div class="zix-text-container">
+
+        <div class="zix-text-body">
+
+          <a href="index.html">Go Back</a>
+
+          <br><br>
+
+          <h1>Log in</h1>
+
+          <br>
+
+          <p class="p1">
+            Enter your email below and we'll send you a magic link.
+          </p>
+
+          <br>
+
+          <label for="email">Email address</label>
+
+          <br><br>
+
+          <div class="input-btn">
+
+            <input
+              type="text"
+              name="Email"
+              id="email"
+              placeholder="eg jane.doe@company.com"
+            />
+            <br /><br />
+
+          </div>
+          
+          <button class="btn1">Continue</button>
+
+          <br /><br />
+
+          <div class="or-line" >
+
+            <div class="line"></div>
+
+            <br><br>
+
+            <div class="breakline">OR</div>
+
+            <div class="line"></div>
+
+          </div>
+
+          <button class="btn2">
+            <img src="images/google-icon.svg" alt="" />Sign in with Google
+          </button>
+          <br><br>
+          <p class="centered-p">Don't have an account? Sign up today</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
